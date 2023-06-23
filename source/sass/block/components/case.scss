@@ -1,0 +1,372 @@
+.case {
+    overflow: hidden;
+    padding-bottom: 70px;
+
+    &__content {
+        padding: 40px 0 0 18px;
+    }
+
+    &__list {
+        max-width: 1145px;
+        display: flex;
+        justify-content: space-between;
+        padding: 240px 0 0 42px;
+        margin-bottom: 74px;
+    }
+
+    &__item {
+        position: relative;
+        width: 191px;
+        font-weight: 800;
+        font-size: 25px;
+        line-height: 30px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $black;
+
+        &::before {
+            position: absolute;
+            content: " ";
+            background-image: url("../img/main/case_radius.svg");
+            width: 190px;
+            height: 190px;
+            top: -210px;
+            left: 0;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &:nth-child(1)::after {
+            position: absolute;
+            content: "9 999";
+            top: -142px;
+            left: 30px;
+            font-weight: 800;
+            font-size: 45px;
+            line-height: 55px;
+            text-align: center;
+            text-transform: uppercase;
+            color: $white;
+        }
+
+        &:nth-child(2)::after {
+            position: absolute;
+            content: "9";
+            top: -141px;
+            left: 80px;
+            font-weight: 800;
+            font-size: 45px;
+            line-height: 55px;
+            text-align: center;
+            text-transform: uppercase;
+            color: $white;
+        }
+
+        &:nth-child(3)::after {
+            position: absolute;
+            content: "999";
+            top: -141px;
+            left: 50px;
+            font-weight: 800;
+            font-size: 45px;
+            line-height: 55px;
+            text-align: center;
+            text-transform: uppercase;
+            color: $white;
+        }
+
+        &:nth-child(4)::after {
+            position: absolute;
+            content: "99";
+            top: -141px;
+            left: 65px;
+            font-weight: 800;
+            font-size: 45px;
+            line-height: 55px;
+            text-align: center;
+            text-transform: uppercase;
+            color: $white;
+        }
+    }
+
+    .price {
+        &__title {
+            @include main-title;
+            text-align: center;
+            color: $black;
+            margin-bottom: 30px;
+        }
+
+        &__list {
+            display: flex;
+            width: 100%;
+            margin: 0 auto;
+            margin-bottom: 37px;
+            padding: 0 40px;
+        }
+
+        .slick-list {
+            width: 100%;
+        }
+
+        &__item {
+            position: relative;
+            text-align: center;
+            padding-bottom: 11px;
+            font-weight: 500;
+            font-size: 25px;
+            line-height: 30px;
+            text-align: center;
+            color: $black;
+            cursor: pointer;
+
+            span {
+                position: relative;
+                display: inline-block;
+            }
+
+            &:hover {
+                span {
+                    &:not(.price__item--active):before {
+                        position: absolute;
+                        content: " ";
+                        width: 100%;
+                        height: 4px;
+                        bottom: -7px;
+                        left: 0;
+                        opacity: 0.8;
+                        background: $red;
+                    }
+                }
+            }
+
+            &:active {
+                span {
+                    &:not(.price__item--active):before {
+                        position: absolute;
+                        content: " ";
+                        width: 100%;
+                        height: 4px;
+                        bottom: -7px;
+                        left: 0;
+                        opacity: 0.6;
+                    }
+                }
+            }
+
+            &--active {
+                span {
+                    &::before {
+                        position: absolute;
+                        content: " ";
+                        width: 100%;
+                        height: 4px;
+                        bottom: -7px;
+                        left: 0;
+                        background: $red;
+                    }
+                }
+            }
+        }
+
+        &__list-wrapper {
+            display: none;
+            flex-flow: row wrap;
+            justify-content: center;
+            gap: 30px 30px;
+            margin-bottom: 52px;
+
+            &.show-list {
+                display: flex;
+            }
+
+            @media (max-width: 1000px) {
+                gap: 24px 20px;
+                margin-bottom: 20px;
+            }
+        }
+
+        &__button {
+            display: none;
+            margin: 50px auto 0;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            text-align: center;
+            border: 0;
+            color: #fff;
+            background-color: $red;
+            padding: 22px 80px;
+            border-radius: 33px;
+
+            cursor: pointer;
+
+            &:active {
+                opacity: 0.6;
+            }
+
+            &.show {
+                display: block;
+            }
+
+            @media (max-width: 1000px) {
+                margin-top: 29px;
+                padding: 18px 56px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .case {
+        padding-bottom: 51px;
+
+        &__content {
+            padding: 20px 0 0 0;
+        }
+
+        &__list {
+            padding: 194px 0 0 0px;
+            margin-bottom: 50px;
+        }
+
+        &__item {
+            font-size: 20px;
+            line-height: 24px;
+
+            &::before {
+                background-size: 154px 154px;
+                background-repeat: no-repeat;
+                top: -164px;
+                left: 5px;
+            }
+
+            &:nth-child(2)::after {
+                left: 71px;
+            }
+
+            &:nth-child(1)::after,
+            &:nth-child(2)::after,
+            &:nth-child(3)::after,
+            &:nth-child(4)::after {
+                font-size: 35px;
+                line-height: 43px;
+                text-align: center;
+                padding-top: 35px;
+            }
+        }
+
+        .price {
+            &__title {
+                @include main-title;
+            }
+
+            &__list {
+                padding: 0;
+                margin: 0 auto 21px;
+            }
+
+            &__item {
+                font-size: 22px;
+                line-height: 27px;
+
+                &--active {
+                    &::before {
+                        bottom: -8px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile-adaptive-width) {
+    .case {
+        padding-bottom: 39px;
+
+        &__list {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0px 20px;
+            padding: 170px 0 0 0;
+            margin-bottom: 40px;
+        }
+
+        &__item {
+            font-size: 18px;
+            line-height: 22px;
+            max-width: 140px;
+
+            @media (max-width: 654px) {
+                &:nth-child(1),
+                &:nth-child(2) {
+                    margin-bottom: 169px;
+                }
+            }
+
+            &::before {
+                background-size: 140px 140px;
+                width: 140px;
+                height: 140px;
+                top: -150px;
+                left: 1px;
+            }
+
+            &:nth-child(1)::after {
+                top: -133px;
+                left: 28px;
+            }
+
+            &:nth-child(2)::after {
+                left: 62px;
+                top: -133px;
+            }
+
+            &:nth-child(3)::after {
+                left: 41px;
+                top: -133px;
+            }
+
+            &:nth-child(4)::after {
+                top: -133px;
+                left: 51px;
+            }
+
+            &:nth-child(1)::after,
+            &:nth-child(2)::after,
+            &:nth-child(3)::after,
+            &:nth-child(4)::after {
+                font-size: 30px;
+                line-height: 37px;
+            }
+        }
+
+        .price {
+            &__title {
+                @include main-title;
+                margin-bottom: 15px;
+            }
+
+            &__list {
+                margin: 0 auto 12px;
+            }
+
+            &__list-wrapper {
+                gap: 20px;
+            }
+
+            &__item {
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            &__button {
+                margin-top: 0;
+                padding: 14px 56px;
+                font-size: 14px;
+                line-height: 17px;
+            }
+        }
+    }
+}

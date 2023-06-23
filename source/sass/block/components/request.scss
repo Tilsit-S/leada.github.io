@@ -1,0 +1,226 @@
+.request {
+    overflow: hidden;
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-left: 21px;
+    }
+
+    &__title {
+        @include main-title;
+        position: relative;
+        max-width: 856px;
+        text-align: center;
+        text-align: center;
+        margin-bottom: 50px;
+
+        @media (max-width: 1000px) {
+            font-size: 38px;
+            line-height: 48px;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 225%;
+            height: 4px;
+            background-color: #f15f79;
+            top: 237px;
+            left: -279%;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 225%;
+            height: 4px;
+            background-color: #f15f79;
+            top: 237px;
+            right: -279%;
+        }
+    }
+
+    &__text {
+        @include description;
+        position: relative;
+        max-width: 606px;
+        text-align: center;
+        color: #1d2931;
+        margin-bottom: 50px;
+
+        @media (max-width: 1000px) {
+            font-size: 22px;
+            line-height: 26px;
+        }
+
+        &::before {
+            display: block;
+            position: absolute;
+            content: '';
+            background-image: url("../img/main/form_redline.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 642px;
+            height: 34px;
+            top: 12px;
+            left: -671px;
+        }
+
+        &::after {
+            display: block;
+            position: absolute;
+            content: '';
+            background-image: url("../img/main/form_redline.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 642px;
+            height: 34px;
+            top: 12px;
+            right: -671px;
+            transform: scaleX(-1);
+        }
+
+        @media (max-width: 885px) {
+            &::before {
+                display: block;
+                position: absolute;
+                content: '';
+                background-image: url("../img/main/form_redline_tablet.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 162px;
+                height: 34px;
+                top: 10px;
+                left: -212px;
+            }
+
+            &::after {
+                display: block;
+                position: absolute;
+                content: '';
+                background-image: url("../img/main/form_redline_tablet.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 162px;
+                height: 34px;
+                top: 10px;
+                right: -216px;
+                transform: scaleX(-1);
+            }
+        }
+    }
+
+    &__link {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        border: 0;
+        color: $white;
+        background-color: $red;
+        padding: 22px 115px;
+        border-radius: 33px;
+    }
+}
+
+@media (max-width: $tablet-width) {
+    .request {
+        padding-top: 50px;
+        padding-bottom: 51px;
+
+        &__content {
+            padding-left: 0;
+        }
+
+        &__title {
+            @include main-title;
+            margin-bottom: 30px;
+        }
+
+        &__text {
+            @include description;
+            max-width: 340px;
+            margin-bottom: 30px;
+        }
+
+        &__link {
+            width: 328px;
+            padding: 17px 0;
+        }
+    }
+}
+
+@media (max-width: $mobile-adaptive-width) {
+    .request {
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        &__title {
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: 23px;
+
+            @media (min-width: 536px) {
+                width: 516px;
+                margin: 0 auto;
+            }
+        }
+
+        &__text {
+            @include description;
+            max-width: 201px;
+            margin-bottom: 18px;
+
+            &::before {
+                width: 60px;
+                height: 15px;
+                top: 3px;
+                left: -69px;
+            }
+
+            &::after {
+                width: 60px;
+                height: 15px;
+                top: 3px;
+                left: 209px;
+            }
+        }
+
+        &__text-lines {
+            position: relative;
+            display: block;
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 150%;
+                height: 2px;
+                background-color: $red;
+                top: -33px;
+                left: -178%;
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 150%;
+                height: 2px;
+                background-color: $red;
+                top: -33px;
+                right: -178%;
+            }
+        }
+
+        &__link {
+            width: 300px;
+            font-size: 14px;
+            line-height: 17px;
+            padding: 14px 0;
+        }
+    }
+}

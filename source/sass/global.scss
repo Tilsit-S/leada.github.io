@@ -1,0 +1,111 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: "Montserrat";
+    background-color: $white;
+    min-width: 320px;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
+}
+
+main {
+    position: relative;
+    z-index: 1;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: $black;
+}
+
+h1,
+h2,
+h3,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.container {
+    @include breakpoint;
+}
+
+.button {
+    cursor: pointer;
+
+    &.red {
+        background-color: $red;
+
+        &:hover {
+            background-color: $tint-red;
+            transition: 0.5s;
+        }
+    
+        &:active {
+            opacity: 0.8;
+            transition: 0.5s;
+        }
+    }
+
+    &.black {
+        background-color: #1D2931;
+
+        &:hover {
+            background-color: $red;
+            border: none;
+            transition: 0.5s;
+        }
+    
+        &:active {
+            opacity: 0.8;
+        }
+    }
+}
+
+.link {
+    &:hover {
+        opacity: 0.8;
+        transition: 0.5s;
+    }
+}
+
+input {
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+        border: 1px solid $red;
+    }
+}

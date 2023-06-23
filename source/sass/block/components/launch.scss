@@ -1,0 +1,432 @@
+.launch {
+    overflow: hidden;
+    &__content {
+        position: relative;
+        max-width: 781px;
+        padding-top: 87px;
+        padding-left: 19px;
+        padding-bottom: 69px;
+
+        @media (max-width: 1000px) {
+            padding-top: 65px;
+        }
+
+        @media (max-width: 860px) {
+            padding-top: 45px;
+        }
+        
+        &::before {
+            position: absolute;
+            content: " ";
+            background-image: url("../img/main/launch_banner_remake.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 1023px;
+            height: 717px;
+            top: -21px;
+            right: -683px;
+            z-index: -3;
+
+            @media (max-width: 1000px) {
+                right: -544px;
+                width: 903px;
+                height: 635px;
+                top: -10px;
+            }
+    
+            @media (max-width: 860px) {
+                right: -440px;
+                width: 838px;
+                height: 587px;
+                top: -10px;
+            }
+
+            @media (max-width: 850px) {
+                right: -300px;
+                width: 662px;
+                height: 462px;
+                top: 103px;
+            }
+        }
+    }
+
+    &__slogan {
+        font-size: 43px;
+        line-height: 52px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 46px;
+
+        @media (max-width: 1000px) {
+            font-size: 40px;
+            line-height: 48px;
+        }
+
+        @media (max-width: 860px) {
+            font-size: 37px;
+            line-height: 45px;
+        }
+    }
+
+    &__colortext {
+        color: $red;
+    }
+
+    &__description {
+        position: relative;
+        max-width: 457px;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 37px;
+        margin: 0 0 114px 0;
+    }
+
+    &__description p {
+        color: $white;
+        font-size: 30px;
+        line-height: 37px;
+
+        @media (max-width: 1000px) {
+            font-size: 28px;
+            line-height: 33px;
+        }
+
+        @media (max-width: 860px) {
+            max-width: 455px;
+            font-size: 25px;
+            line-height: 30px;
+        }
+    }
+
+    &__description::before {
+        position: absolute;
+        content: " ";
+        background-image: url("../img/main/launch_backline.png");
+        background-repeat: no-repeat;
+        left: -369px;
+        top: -13px;
+        width: 900px;
+        height: 200px;
+        z-index: -1;
+
+        @media (max-width: 1000px) {
+            top: -19px;
+        }
+
+        @media (max-width: 860px) {
+            top: -25px;
+        }
+    }
+
+    &__description::after {
+        position: absolute;
+        content: "";
+        width: 330%;
+        height: 142px;
+        background-color: #f15f79;
+        top: -13px;
+        left: -370%;
+    }
+
+    &__button {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    &__button-app {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        border: none;
+        color: $white;
+        background-color: $red;
+        padding: 23px 67px;
+        margin-right: 31px;
+        border-radius: 33px;
+    }
+
+    &__button-whatsapp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 273px;
+        padding: 20px 64px 20px 120px;
+        border: 2px solid $black;
+        background-color: $white;
+        border-radius: 31px;
+
+        a {
+            color: $black;
+            position: relative;
+            font-size: 16px;
+            line-height: 20px;
+
+            &::before {
+                position: absolute;
+                content: " ";
+                background-image: url("../img/main/whatsapp-button.svg");
+                background-size: 37px 37px;
+                top: -8px;
+                left: -60px;
+                width: 37px;
+                height: 37px;
+                background-repeat: no-repeat;
+            }
+        }
+
+        &:hover {
+            filter: invert(1);
+            transition: 0.5s;
+        }
+    }
+}
+
+@media (max-width: $tablet-width) {
+    .launch {
+        &__content {
+            position: relative;
+            max-width: 500px;
+            padding-top: 17px;
+            padding-left: 4px;
+            padding-bottom: 40px;
+            
+            &::before {
+                position: absolute;
+                content: " ";
+                background-image: url("../img/main/main_banner_tablet.png");
+                width: 469px;
+                height: 384px;
+                background-repeat: no-repeat;
+                top: 76px;
+                right: -226px;
+                z-index: -3;
+
+                @media (max-width: 517px) {
+                    top: 100px;
+                    right: -119px
+                }
+
+                @media (max-width: 500px) {
+                    width: 425px;
+                    height: 349px;
+                }
+            }
+        }
+
+        &__slogan {
+            font-weight: 800;
+            font-size: 29px;
+            line-height: 35px;
+            text-transform: uppercase;
+
+            @media (max-width: 517px) {
+                font-size: 27px;
+                line-height: 33px;
+            }
+
+            @media (max-width: 485px) {
+                font-size: 25px;
+                line-height: 31px;
+            }
+
+            @media (max-width: 450px) {
+                font-size: 23px;
+                line-height: 29px;
+            }
+
+            @media (max-width: 330px) {
+                font-size: 22px;
+                line-height: 29px;
+            }
+        }
+
+        &__description {
+            margin: 0 0 132px;
+        }
+
+        &__description p {
+            max-width: 350px;
+            font-weight: 600;
+            font-size: 23px;
+            line-height: 28px;
+
+            @media (max-width: 517px) {
+                font-size: 22px;
+                line-height: 27px;
+            }
+
+            @media (max-width: 450px) {
+                max-width: 330px;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 24px;
+            }
+
+            @media (max-width: 330px) {
+                font-size: 19px;
+                line-height: 24px;
+            }
+        }
+
+        &__description::before {
+            position: absolute;
+            content: " ";
+            background-image: url("../img/main/launch_backline_tablet.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            left: -46px;
+            top: -11px;
+            width: 432px;
+            height: 104px;
+            z-index: -1;
+
+            @media (max-width: 450px) {
+                left: -82px;
+                top: -15px;
+            }
+
+            @media (max-width: 370px) {
+                left: -107px;
+            }
+
+            @media (max-width: 340px) {
+                left: -120px;
+            }
+        }
+
+        &__button {
+            @media (max-width: 450px) {
+                max-width: 400px;
+                flex-direction: column;
+            }
+        }
+
+        &__button-app {
+            width: 212px;
+            height: 55px;
+            padding: 0 30px;
+            margin-right: 20px;
+
+            @media (max-width: 450px) {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        &__button-whatsapp {
+            width: 212px;
+            padding: 17px 64px 14px 120px;
+            
+
+            &::before {
+                background-size: 34px 34px;
+                top: -9px;
+                left: -58px;
+                width: 34px;
+                height: 34px;
+            }
+
+            @media (max-width: 450px) {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile-width) {
+    .launch {
+        &__content {
+            padding-top: 17px;
+            padding-left: 0;
+            padding-bottom: 20px;
+            
+            &::before {
+                position: absolute;
+                content: " ";
+                background-image: url("../img/main/main_banner_tablet.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 319px;
+                height: 286px;
+                top: 98px;
+                right: 3px;
+                z-index: -3;
+            }
+        }
+
+        &__slogan {
+            font-weight: 800;
+            font-size: 20px;
+            line-height: 24px;
+            text-transform: uppercase;
+            margin-bottom: 23px;
+        }
+
+        &__description {
+            margin: 0 0 157px;
+        }
+
+        &__description p {
+            max-width: 250px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        &__description::before {
+            position: absolute;
+            content: " ";
+            background-image: url("../img/main/launch_backline_tablet.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            left: -45px;
+            top: -11px;
+            width: 345px;
+            height: 80px;
+        }
+
+        &__button {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__button-app {
+            width: 100%;
+            height: 45px;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            padding: 15px 88px;
+            margin: 0 0 10px 0;
+            color: $white;
+        }
+
+        &__button-whatsapp {
+            width: 300px;
+            height: 45px;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            border: 2px solid $black;
+            border-radius: 33px;
+            padding: 13px 0 14px 49px;
+            
+            a {
+                font-size: 14px;
+                line-height: 17px;
+                
+                &::before {
+                    top: -6px;
+                    left: -49px;
+                    background-size: 29px 29px;
+                    width: 29px;
+                    height: 29px;
+                }
+            }
+        }
+    }
+}
